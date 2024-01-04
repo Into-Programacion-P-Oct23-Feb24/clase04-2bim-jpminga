@@ -13,40 +13,44 @@ public class Ejemplo041 {
 
     public static void main(String[] args) {
         // 
-        int[][] arregloN1 = {{1, 2, 3}, {3, 2, 4}, {2, 6, 2}};
-        int[][] arregloN2 = {{1, 2, 3}, {2, 2, 2}, {3, 1, 2}};
-        int[][] arregloFinal = new int[3][3];
-        String acumulador1 = "";
-        String acumulador2 = "";
-        String acumuladorFinal = "";
-        
-        for (int f = 0; f < arregloN1.length; f++) {
-            for (int c = 0; c < arregloN1[f].length; c++) {
-                arregloFinal[f][c] = obtenerMultiplicacion(arregloN1[f][c],
-                         arregloN2[f][c]);
-            }
+        int[][] arreglo1 = {{1, 2, 3}, {3, 2, 4}, {2, 6, 2}};
+        int[][] arreglo2 = {{1, 2, 3}, {2, 2, 2}, {3, 1, 2}};
+        int[][] arreglo3 = new int[3][3];
 
-        }
-
-        for (int f = 0; f < arregloN1.length; f++) {
-            for (int c = 0; c < arregloN1[f].length; c++) {
-              acumulador1 = String.format("%s%d  ",acumulador1, arregloN1[f][c]);
-              acumulador2 = String.format("%s%d  ",acumulador2, arregloN2[f][c]);
-              acumuladorFinal = String.format("%s%d  ",acumuladorFinal, arregloFinal[f][c]);
+        for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1[i].length; j++) {
+                arreglo3[i][j] = obtenerMultiplicacion(arreglo1[i][j],
+                        arreglo2[i][j]);
             }
-            acumulador1 = String.format("%s\n ",acumulador1);
-            acumulador2 = String.format("%s\n ",acumulador2);
-            acumuladorFinal = String.format("%s\n ",acumuladorFinal);
         }
-        
+        for (int i = 0; i < arreglo1.length; i++) {
+            for (int j = 0; j < arreglo1.length; j++) {
+                System.out.printf("%s\t", arreglo1[i][j]);
+
+            }
+            System.out.println("");
+        }
+        System.out.println("\n");
+        for (int i = 0; i < arreglo2.length; i++) {
+            for (int j = 0; j < arreglo2.length; j++) {
+                System.out.printf("%s\t", arreglo2[i][j]);
+            }
+            System.out.println("");
+        }
+        System.out.println("\nEl resultado de la multiplicacion es:\n");
+        for (int i = 0; i < arreglo3.length; i++) {
+            for (int j = 0; j < arreglo3.length; j++) {
+                System.out.printf("%s\t", arreglo3[i][j]);
+            }
+            System.out.println("");
+        }
 
     }
 
     public static int obtenerMultiplicacion(int a, int b) {
-        int suma;
-        suma = a * b;
-
-        return suma;
+        int operacion;
+        operacion = a * b;
+        return operacion;
     }
 
 }
