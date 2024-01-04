@@ -30,7 +30,7 @@ public class Ejemplo041 {
             }
             System.out.println("");
         }
-        System.out.println("\n");
+        System.out.println("");
         for (int i = 0; i < arreglo2.length; i++) {
             for (int j = 0; j < arreglo2.length; j++) {
                 System.out.printf("%s\t", arreglo2[i][j]);
